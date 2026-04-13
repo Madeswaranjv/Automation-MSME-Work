@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #080808;
+  --color-bg-secondary: #111111;
+  --color-surface: #1A1A1A;
+  --color-surface-raised: #222222;
+  --color-accent-dark: #2A2A2A;
+  --color-accent-mid: #444444;
+  --color-accent-light: #888888;
+  --color-brand: #F96A2A;
+  --color-brand-light: #FF8C42;
+  --color-brand-deep: #D94F10;
+  --color-brand-glow: #FF5500;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #CCCCCC;
+  --color-text-muted: #666666;
+  --color-border: #2A2A2A;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --animate-pulse-scale: pulse-scale 2s ease infinite;
+  --animate-border-pulse: border-pulse 2s infinite;
+  --animate-dot-blink: dot-blink 1.5s infinite;
+  --animate-scroll-ticker: scroll-ticker 20s linear infinite;
+  --animate-cta-pulse: cta-pulse 2s ease infinite;
+}
+
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes border-pulse {
+  0%, 100% { border-color: #2A2A2A; }
+  50% { border-color: #F96A2A; }
+}
+
+@keyframes dot-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes scroll-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 106, 42, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(249, 106, 42, 0); }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Base Styles ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #080808;
+  color: #CCCCCC;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* ── Typography Classes ── */
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.h1-hero {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 68px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.h2-section {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.h3-card {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.3px;
+}
+
+.h4-dashboard {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.text-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #CCCCCC;
+}
+
+.text-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.text-metric {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #F96A2A;
+  letter-spacing: -1px;
+}
+
+.text-nav {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888888;
+}
+
+.text-nav-active {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.text-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Button Styles ── */
+.btn-primary {
+  background-color: #F96A2A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.btn-primary:hover {
+  background-color: #FF8C42;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #CCCCCC;
+  border: 1px solid #2A2A2A;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: border-color 150ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: #444444;
+}
+
+.btn-destructive {
+  background-color: #EF4444;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.btn-destructive:hover {
+  background-color: #DC2626;
+}
+
+/* ── Input Styles ── */
+.input-field {
+  background-color: #111111;
+  border: 1px solid #2A2A2A;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.input-field::placeholder {
+  color: #444444;
+}
+
+.input-field:focus {
+  border-color: #F96A2A;
+}
+
+/* ── Section Label ── */
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #F96A2A;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ── Card Base ── */
+.card {
+  background-color: #1A1A1A;
+  border: 1px solid #2A2A2A;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* ── Ticker ── */
+.ticker-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scroll-ticker 20s linear infinite;
+}
+
+/* ── Grid ── */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* Utilities */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}

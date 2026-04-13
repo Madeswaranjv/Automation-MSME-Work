@@ -1,0 +1,192 @@
+# =========================
+
+# NODE / FRONTEND
+
+# =========================
+
+node_modules/
+dist/
+build/
+.out/
+.next/
+.vite/
+
+# Logs
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+
+# ENV / SECRETS
+
+# =========================
+
+.env
+.env.*
+!.env.example
+*.env.local
+
+# =========================
+
+# TYPESCRIPT
+
+# =========================
+
+*.tsbuildinfo
+
+# =========================
+
+# PYTHON BACKEND (FastAPI + AI)
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache / tools
+
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# =========================
+
+# AI / ML / AGENTS
+
+# =========================
+
+# Model files (VERY IMPORTANT - huge)
+
+*.pt
+*.pth
+*.onnx
+*.bin
+*.gguf
+*.ggml
+*.ckpt
+
+# Vector DB / embeddings
+
+chroma/
+chromadb/
+*.faiss
+
+# =========================
+
+# DATABASE / STORAGE
+
+# =========================
+
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+
+# =========================
+
+# TAURI / ELECTRON (DESKTOP)
+
+# =========================
+
+src-tauri/target/
+src-tauri/.cargo/
+src-tauri/target/
+dist-tauri/
+
+# Electron
+
+release/
+*.asar
+
+# =========================
+
+# BUILD / CACHE
+
+# =========================
+
+.cache/
+tmp/
+temp/
+*.cache
+
+# =========================
+
+# IDE / EDITOR
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# ULTRA
+.ultra/
+.ultra*
+
+# OS FILES
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# TEST / COVERAGE
+
+# =========================
+
+coverage/
+.nyc_output/
+
+# =========================
+
+# DOCKER / DEVOPS
+
+# =========================
+
+.dockerignore
+docker-compose.override.yml
+
+# =========================
+
+# CI/CD
+
+# =========================
+
+*.local
+
+# =========================
+
+# OPTIONAL (KEEP CLEAN REPO)
+
+# =========================
+
+# Uncomment if needed:
+
+# package-lock.json
+
+# yarn.lock
+
+# pnpm-lock.yaml
